@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div  class='k1' id="mylist">
+     <!--    <li class="l1"><a href="javascript:void(0)">1xxx</a></li>
+        <li class="l1"><a href="javascript:void(0)">2yyyy</a></li>
+        <li class="l1"><a href="javascript:void(0)">3zzzz</a></li> -->
+     </div>
+    <button onclick="addItem()">Add</button>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        // html=" ";
+        // function addItem(){
+        //     $.get("https://jsonplaceholder.typicode.com/posts",function(data){
+        //         for (d of data){
+        //             html+=`<li>userId:${d.userId} link: <a href=${d.url}>LINK</a></li>`
+        //             $("ul").append(html)
+        //             console.log("html")
+        //             }
+        //          })
+        // }
+
+        $.get("https://jsonplaceholder.typicode.com/posts",function(data){
+            // console.log(data)
+            
+            filteredData = data.filter(element => {
+                return element.userId===1
+            });
+            filteredData.forEach(element => {
+                $("#mylist").append("<div class='s1'><h1 class='h1'>"+element.title+"</h1><br><p id='a1'>"+element.body+"</p></div>")
+            });
+        })
+    </script>
+</body>
+</html>

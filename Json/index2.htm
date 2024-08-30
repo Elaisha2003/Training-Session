@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hi</p>
+    <!-- <script src="index.js"></script> -->
+    <!-- <script src="index2.js"></script> -->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <!-- get method   -->
+    <script>
+    $.ajax({
+    url: 'https://api.jsonbin.io/v3/b/66d1630aacd3cb34a87ba0b4',
+    type: 'GET',
+    headers: {
+        'X-Master-Key': '$2a$10$/SRZPurrKWK71Xt56BVds..BY0oCa3WXu8dBgdDIFPOiriJm6XodS' // Optional if the bin is private
+    },
+    success: function(data) {
+        console.log(data);
+    },
+    error: function(error) {
+        console.error('Error:', error);
+    }
+     });
+
+     // First, retrieve the current data
+$.ajax({
+    url: 'https://api.jsonbin.io/v3/b/66d1630aacd3cb34a87ba0b4',
+    type: 'GET',
+    headers: {
+        'X-Master-Key': '$2a$10$/SRZPurrKWK71Xt56BVds..BY0oCa3WXu8dBgdDIFPOiriJm6XodS'
+    },
+    success: function(existingData) {
+        // Add the new object to the existing data
+        existingData.record.push({
+            "name": "Divya",
+            "Age": "zz",
+            "id":"22"
+        },
+    {
+        "name":"Pachi",
+        "Age":"aa",
+        "id":"4"
+    });
+ 
+        // Now update the bin with the new data
+        $.ajax({
+            url: 'https://api.jsonbin.io/v3/b/66d1630aacd3cb34a87ba0b4',
+            type: 'PUT',
+            contentType: 'application/json',
+            headers: {
+                'X-Master-Key': '$2a$10$/SRZPurrKWK71Xt56BVds..BY0oCa3WXu8dBgdDIFPOiriJm6XodS'
+            },
+            data: JSON.stringify(existingData),
+            success: function(data) {
+                console.log('Bin updated with new data:', data);
+            },
+            error: function(error) {
+                console.error('Error:', error);
+            }
+        });
+    },
+    error: function(error) {
+        console.error('Error:', error);
+    }
+    });
+    </script>
+    </body>
+</html>

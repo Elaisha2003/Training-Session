@@ -1,0 +1,127 @@
+.header{
+    background-color: red;
+    height:30px;
+    /* width:100% ; */
+    display: flex;
+    padding-top: 10px;
+}
+.tanish{
+    background-color: rgb(241, 203, 120);
+    height: 20px;
+    width:50%;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    /* margin-bottom:5px ; */
+    
+}
+.tan1{
+    background-color:rosybrown;
+    width:50%;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    height: 20px;
+    margin-left: 2px;
+}
+
+.vid{
+    background-color: aqua;
+    height: 50px;
+    margin-top: 7px;
+}
+
+.title{
+    background-color: yellow;
+    height: 15px;
+    margin-top: 4px;
+}
+.car{
+    background-color: brown;
+    height: 70px;
+    margin-top: 5px;
+    display: flex;
+    padding-top: 8px;
+}
+
+/* .c1{
+    background-color: rgb(170, 35, 130);
+    width: 25%;
+    height:60px;
+    margin-left: 8px;
+}
+.c2
+{
+    background-color: rgb(170, 35, 130);
+    width: 25%;
+    height:60px;
+    margin-left: 8px;
+}
+.c3
+{
+    background-color: rgb(170, 35, 130);
+    width: 25%;
+    height:60px;
+    margin-left: 8px;
+}
+.c4{
+    background-color: rgb(170, 35, 130);
+    width: 20%;
+    height:60px;
+    margin-left: 8px;
+} */
+.sports{
+    background-color: blue;
+    height: 70px;
+    margin-top: 5px;
+    padding-top: 7px;
+    display: flex;
+
+}
+.s1{
+    background-color: rgb(170, 35, 130);
+    width: 25%;
+    height:60px;
+    margin-left: 8px;
+}
+.s2{
+    background-color: rgb(170, 35, 130);
+    width: 25%;
+    height:60px;
+    margin-left: 8px;
+    margin-right: 5px;
+}
+
+.action{
+    height: 70px;
+    margin-top: 5px;
+    background-color: blueviolet;
+    padding-top: 8px;
+    display: flex;
+}    
+
+.myth{
+    height: 70px;
+    margin-top: 5px;
+    background-color: chartreuse;padding-top: 8px;
+    display: flex;
+
+
+}
+
+.company{
+    height: 45px;
+    margin-top: 5px;
+    background-color: black;
+   
+}
+.about{
+    height: 50px;
+    margin-top: 5px;
+    background-color: darkgreen;
+}
+.copyright{
+    height: 45px;
+    margin-top: 5px;
+    background-color: aquamarine;
+}
